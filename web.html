@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>George Kass - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      direction: ltr;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00bfff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      margin-bottom: 15px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .accordion {
+      background-color: #005f99;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.3s;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .active, .accordion:hover {
+      background-color: #007acc;
+    }
+
+    .panel {
+      padding: 0 18px 20px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="289B7E27-31FC-4255-940E-91E8DA7F47C3.jpeg.HEIC" alt="George Kass" class="profile-img">
+  <h1>George Kass</h1>
+  <p>Information Systems Engineering student at YVC</p>
+</header>
+
+<div class="container">
+
+  <button class="accordion">Vision</button>
+  <div class="panel">
+    <p>I aim to merge coding with 3D modeling to push the boundaries of both fields through creativity and innovation.</p>
+  </div>
+
+  <button class="accordion">Work Experience</button>
+  <div class="panel">
+    <p><strong>Frangelico Restaurant (10/2022 - Present)</strong><br>Shift Manager – managed team operations, customer service, scheduling, and inventory.</p>
+    <p><strong>Frangelico Express (10/2019 - 10/2022)</strong><br>Shift Manager – led delivery/takeaway staff and ensured fast, quality service.</p>
+  </div>
+
+  <button class="accordion">Education</button>
+  <div class="panel">
+    <p>B.Sc. in Information Systems Engineering<br>Expected graduation: April 2026 – YVC College</p>
+  </div>
+
+  <button class="accordion">Certifications</button>
+  <div class="panel">
+    <ul>
+      <li>Advanced Excel Certification</li>
+      <li>Python & Blender (Udemy)</li>
+    </ul>
+  </div>
+
+  <button class="accordion">Skills</button>
+  <div class="panel">
+    <p>Adobe Illustrator, Blender (3D Modeling), CSS, Java, Photoshop, Python, SQL</p>
+  </div>
+
+  <button class="accordion">My 3D Work</button>
+  <div class="panel">
+    <div class="gallery">
+      <img src="419B9B78-283E-4321-B4FD-93FE43796813.jpeg.PNG" alt="3D Model 1">
+      <img src="419B9B78-283E-4321-B4FD-93FE43796813.jpeg.PNG.PNG" alt="3D Model 2">
+      <img src="EBE69411-4049-44EB-B326-AD2C7B044BBA.PNG" alt="3D Model 3">
+      <img src="BA6669FE-C9F4-4B74-92BE-733BDCFA2A79.jpeg.PNG" alt="3D Model 4">
+    </div>
+  </div>
+
+  <button class="accordion">Contact</button>
+  <div class="panel">
+    <p>Phone: +972 523431218<br>Email: gorgekass18@gmail.com<br>LinkedIn: 
+    <a href="https://linkedin.com/in/george-kass-71b632302" target="_blank">
+      linkedin.com/in/george-kass
+    </a></p>
+  </div>
+
+</div>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  }
+</script>
+
+</body>
+</html>
